@@ -1,0 +1,26 @@
+{
+  "name": "js-class-2016-proto",
+  "version": "0.0.1",
+  "description": "Javascript class for Epita 2016",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitaJS/js-class-2016-proto.git"
+  },
+  "keywords": [
+    "class"
+  ],
+  "author": "Offirmo <offirmo.net@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/EpitaJS/js-class-2016-proto/issues"
+  },
+  "homepage": "https://github.com/EpitaJS/js-class-2016-proto#readme",
+  "engines": {
+    "node": "^4.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js"
+}

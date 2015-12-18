@@ -1,0 +1,22 @@
+{
+  "name": "js-class-2016-proto",
+  "description": "Javascript class for Epita 2016",
+  "main": "index.js",
+  "authors": [
+    "Offirmo <offirmo.net@gmail.com>"
+  ],
+  "license": "Unlicense",
+  "keywords": [
+    "class"
+  ],
+  "homepage": "http://epitajs.github.io/js-class-2016-proto/",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
