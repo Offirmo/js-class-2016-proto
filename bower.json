@@ -20,17 +20,20 @@
     "tests"
   ],
   "dependencies": {
-    "lodash": "~3.10.1",
-    "underscore.string": "~3.2.2",
-    "require-css": "~0.1.8",
-    "text": "requirejs-text#~2.0.14",
-    "require-dust": "*",
-    "requirejs-domready": "domReady#~2.0.1",
     "bootstrap": "~3.3.6",
-    "requirejs": "~2.1.22"
+    "es6-promise": "~3.0.2",
+    "lodash": "~3.10.1",
+    "require-css": "~0.1.8",
+    "require-dust": "*",
+    "requirejs": "~2.1.22",
+    "requirejs-domready": "domReady#~2.0.1",
+    "text": "requirejs-text#~2.0.14",
+    "underscore.string": "~3.2.2"
   },
   "devDependencies": {
-    "mocha": "~2.3.4",
-    "chai": "~3.4.2"
+    "chai": "latest",
+    "mocha": "latest",
+    "sinon": "latest",
+    "sinon-chai": "latest"
   }
 }
