@@ -21,6 +21,7 @@ System.config({
     "chai": "npm:chai@3.4.1",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
+    "jquery": "npm:jquery@2.2.0",
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
     "mocha": "npm:mocha@2.3.4",
