@@ -6,6 +6,3 @@ mocha.checkLeaks();
 import './some-test.js';
 
 mocha.run();
-
-
-

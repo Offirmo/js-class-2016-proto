@@ -22,7 +22,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "puer": "puer --exclude 'bower_components|node_modules|jspm_packages'",
+    "start": "puer --exclude 'bower_components|node_modules|jspm_packages'",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
     "jspm-install-dev": "jspm clean && jspm install && jspm update",
     "install-globals": "npm install --global jspm puer && npm update -g jspm puer",
@@ -46,6 +46,8 @@
       "jquery": "npm:jquery@^2.2.0",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "lodash": "npm:lodash@^3.10.1",
+      "sinon": "npm:sinon@^1.17.2",
+      "sinon-chai": "npm:sinon-chai@^2.8.0",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {

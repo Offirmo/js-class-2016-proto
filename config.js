@@ -26,6 +26,8 @@ System.config({
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
     "mocha": "npm:mocha@2.3.4",
+    "sinon": "npm:sinon@1.17.2",
+    "sinon-chai": "npm:sinon-chai@2.8.0",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -130,6 +132,10 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "type-detect": "npm:type-detect@0.1.1"
     },
+    "npm:formatio@1.1.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "samsam": "npm:samsam@1.1.2"
+    },
     "npm:graceful-readlink@1.0.1": {
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
@@ -166,6 +172,17 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:sinon-chai@2.8.0": {
+      "chai": "npm:chai@3.4.1",
+      "sinon": "npm:sinon@1.17.2"
+    },
+    "npm:sinon@1.17.2": {
+      "formatio": "npm:formatio@1.1.1",
+      "lolex": "npm:lolex@1.3.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "samsam": "npm:samsam@1.1.2",
+      "util": "npm:util@0.10.3"
     },
     "npm:source-map@0.4.4": {
       "amdefine": "npm:amdefine@1.0.0",
