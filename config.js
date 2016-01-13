@@ -26,8 +26,6 @@ System.config({
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
     "mocha": "npm:mocha@2.3.4",
-    "sinon": "bower:sinon@1.17.2",
-    "sinon-chai": "bower:sinon-chai@2.8.0",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"

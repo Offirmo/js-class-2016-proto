@@ -22,10 +22,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
+    "puer": "puer --exclude 'bower_components|node_modules|jspm_packages'",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
     "jspm-install-dev": "jspm clean && jspm install && jspm update",
-    "install_globals": "npm install --global jspm && npm update -g jspm",
-    "install-dev": "npm run install_globals && npm prune && npm install && npm update && npm run jspm-install-dev",
+    "install-globals": "npm install --global jspm puer && npm update -g jspm puer",
+    "install-dev": "npm run install-globals && npm prune && npm install && npm update && npm run jspm-install-dev",
     "postinstall": "npm run jspm-install",
     "jj": "npm run jspm-install-dev",
     "ii": "npm run install-dev"
@@ -53,9 +54,7 @@
       "chai": "npm:chai@^3.4.1",
       "clean-css": "npm:clean-css@^3.4.9",
       "core-js": "npm:core-js@^1.1.4",
-      "mocha": "npm:mocha@^2.3.4",
-      "sinon": "bower:sinon@^1.17.2",
-      "sinon-chai": "bower:sinon-chai@^2.8.0"
+      "mocha": "npm:mocha@^2.3.4"
     }
   }
 }
