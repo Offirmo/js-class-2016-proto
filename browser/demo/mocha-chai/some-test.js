@@ -1,10 +1,7 @@
 import mocha from 'mocha';
-mocha.setup('bdd');
-
-import chai, {expect} from 'chai';
+import {expect} from 'chai';
 import sinon from 'sinon';
-import sinon_chai from 'sinon-chai';
-chai.use(sinon_chai);
+mocha.setup('bdd');
 
 describe('ES6', function () {
 
