@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- html_004 template -->
+
+<html lang='en'>
+<head>
+	<meta charset="utf-8">
+	<title>History of web technologies</title>
+  <link rel="shortcut icon" href="../../common/assets/favicons/favicon.ico">
+
+	<script src="../../../jspm_packages/system.js"></script>
+	<script src="../../../config.js"></script>
+	<script>
+		window.define = System.amdDefine;
+		window.require = window.requirejs = System.amdRequire;
+	</script>
+</head>
+<body>
+
+<div id="content">
+	<div class="container">
+		<h1 id="header">History of web technologies</h1>
+    <div class="timeline" id="timeline"></div>
+	</div> <!-- /container -->
+</div> <!-- /content -->
+
+<script>
+	require( [ 'd3kit-timeline', 'bootstrap', 'bootstrap/css/bootstrap.css!' ],
+	function(d3Kit) {
+		var data = [
+			{
+        time: new Date(1977, 4,25), category: 'todo',
+        title: 'A New Hope'
+      },
+      {
+        time: new Date(2015,11,18), category: 'todo',
+        title: 'The Force Awakens'
+      }
+		];
+
+		var chart = new d3Kit.Timeline('#timeline', {
+			direction: 'right',
+			initialWidth: 400,
+			//initialHeight: 250,
+			textFn: function(d){
+				return d.time.getFullYear() + ' - ' + d.title;
+			}
+		});
+
+		chart.data(data);
+	});
+</script>
+
+</body>
+</html>

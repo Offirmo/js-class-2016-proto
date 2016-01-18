@@ -23,7 +23,9 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
     "cytoscape": "npm:cytoscape@2.5.4",
-    "d3kit-timeline": "npm:d3kit-timeline@0.3.2",
+    "d3": "bower:d3@3.4.13",
+    "d3kit": "bower:d3kit@1.0.9",
+    "d3kit-timeline": "bower:d3kit-timeline@0.4.0",
     "jquery": "npm:jquery@2.2.0",
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
@@ -31,6 +33,13 @@ System.config({
     "sinon": "npm:sinon@1.17.2",
     "sinon-chai": "npm:sinon-chai@2.8.0",
     "text": "github:systemjs/plugin-text@0.0.4",
+    "bower:d3kit-timeline@0.4.0": {
+      "d3kit": "bower:d3kit@1.0.9",
+      "labella": "bower:labella@0.1.1"
+    },
+    "bower:d3kit@1.0.9": {
+      "d3": "bower:d3@3.4.13"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -133,10 +142,6 @@ System.config({
     "npm:cytoscape@2.5.4": {
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-    },
-    "npm:d3kit-timeline@0.3.2": {
-      "d3kit": "npm:d3kit@1.0.9",
-      "labella": "npm:labella@0.1.1"
     },
     "npm:deep-eql@0.1.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
