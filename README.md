@@ -26,6 +26,7 @@ npm start
 
 ## Credits
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+* http://www.oreilly.com/web-platform/free/files/modern-javascript.pdf
 * favicons generated with http://realfavicongenerator.net/
 
 
@@ -37,3 +38,6 @@ npm start
 ## Notes
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 * https://github.com/braydie/HowToBeAProgrammer
+
+Ideas
+* n params : add numbers and callback function
