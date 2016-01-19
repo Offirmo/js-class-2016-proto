@@ -28,14 +28,80 @@
 	function(d3Kit) {
 		var data = [
 			{
-        time: new Date(1977, 4,25), category: 'todo',
-        title: 'A New Hope'
+        time: new Date(1990,  1,  1), category: 'web',
+        title: 'Early web'
       },
+      {
+        time: new Date(1995,  1,  1), category: 'js',
+        title: 'Javascript (Netscape)'
+      },
+      {
+        time: new Date(1995,  1,  1), category: 'web',
+        title: 'Apache HTTP Server'
+      },
+      {
+        time: new Date(1996,  1,  1), category: 'web',
+        title: 'PHP'
+      },
+      {
+        time: new Date(1999,  1,  1), category: 'js',
+        title: 'Ajax (Microsoft)'
+      },
+      {
+        time: new Date(2001,  1,  1), category: 'js',
+        title: 'JSON'
+      },
+      {
+        time: new Date(2004,  1,  1), category: 'web',
+        title: 'nginx'
+      },
+      {
+        time: new Date(2005,  1,  1), category: 'web',
+        title: 'Ruby On Rails'
+      },
+      {
+        time: new Date(2006,  1,  1), category: 'js',
+        title: 'jQuery'
+      },
+      {
+        time: new Date(2008,  1,  1), category: 'web',
+        title: 'Google Chrome + v8'
+      },
+      {
+        time: new Date(2009,  1,  1), category: 'js',
+        title: 'AngularJS (Google)'
+      },
+      {
+        time: new Date(2009,  1,  1), category: 'js',
+        title: 'node.js'
+      },
+      {
+        time: new Date(2009, 10, 28), category: 'js',
+        title: 'Underscore'
+      },
+      {
+        time: new Date(2012,  5, 25), category: 'js',
+        title: 'Lodash'
+      },
+
+
+
       {
         time: new Date(2015,11,18), category: 'todo',
         title: 'The Force Awakens'
       }
 		];
+
+    var colors = {
+      web: {
+        fg: 'black',
+        bg: 'white'
+      },
+      js: {
+        fg: 'black',
+        bg: 'yellow'
+      }
+    };
 
 		var chart = new d3Kit.Timeline('#timeline', {
 			direction: 'right',

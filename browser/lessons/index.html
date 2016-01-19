@@ -9,23 +9,31 @@
   <script src="../../../jspm_packages/system.js"></script>
   <script src="../../../config.js"></script>
   <script>
-    System.amdRequire([
-      'mocha',
-      'chai',
-      'sinon-chai',
-
-      './some-test.js',
-    ], function (mocha, chai, sinonChai) {
-      mocha.checkLeaks();
-      chai.use(sinonChai);
-
-      mocha.run();
-    });
+    window.define = System.amdDefine;
+    window.require = window.requirejs = System.amdRequire;
   </script>
+
 </head>
 
 <body>
   <div id="mocha"></div>
 </body>
+
+<script>
+  require([
+    'mocha',
+    'chai',
+    'sinon-chai',
+
+    './chrome-dev-tools/index.js',
+    './some-test.js',
+
+  ], function (mocha, chai, sinonChai) {
+    mocha.checkLeaks();
+    chai.use(sinonChai);
+
+    mocha.run();
+  });
+</script>
 
 </html>

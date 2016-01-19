@@ -25,3 +25,11 @@ Patterns
 WebAssembly          https://groups.google.com/forum/#!msg/v8-users/PInzACvS5I4/e2HflsbvCgAJ
 v8
 pattern : IIFE       https://blog.mariusschulz.com/2016/01/13/disassembling-javascripts-iife-syntax
+ChromeDevTools
+Web SQL
+IndexedDB
+LocalStorage
+Session Storage
+Cookies
+Application Cache
+Cache Storage
