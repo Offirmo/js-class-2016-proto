@@ -7,7 +7,6 @@ describe('A good javascript developer', function () {
 
   context('mastering javascript functions', function () {
 
-    it('should master local state modification', function () {
-    });
+    it('should be able to do it');
   });
 });
