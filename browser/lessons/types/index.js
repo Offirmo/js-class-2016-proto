@@ -22,12 +22,12 @@ describe('A good javascript developer', function () {
           expected: true
         },
         {
-          input: 'true',
-          expected: true
-        },
-        {
           input: false,
           expected: false
+        },
+        {
+          input: 'true',
+          expected: true
         },
         {
           input: 'false',

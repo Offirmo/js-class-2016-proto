@@ -41,3 +41,8 @@ npm start
 
 Ideas
 * n params : add numbers and callback function
+
+HTML APIs
+* https://developers.google.com/web/updates/
+* http://html5index.org/
+* http://www.w3schools.com/html/html5_geolocation.asp
