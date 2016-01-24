@@ -38,9 +38,11 @@ npm start
 ## Notes
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 * https://github.com/braydie/HowToBeAProgrammer
+* http://caniuse.com
 
 Ideas
 * n params : add numbers and callback function
+* auto-convert links-like to proper links in a page
 
 HTML APIs
 * https://developers.google.com/web/updates/

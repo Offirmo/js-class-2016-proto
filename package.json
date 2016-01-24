@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/EpitaJS/js-class-2016-proto#readme",
   "engines": {
-    "node": "^4.2.4"
+    "node": "^4.2.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
