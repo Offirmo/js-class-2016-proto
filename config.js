@@ -28,7 +28,7 @@ System.config({
     "d3kit-timeline": "bower:d3kit-timeline@0.4.1",
     "jquery": "npm:jquery@2.2.0",
     "json": "github:systemjs/plugin-json@0.1.0",
-    "lodash": "npm:lodash@4.0.0",
+    "lodash": "npm:lodash@4.0.1",
     "mocha": "npm:mocha@2.3.4",
     "sinon": "npm:sinon@1.17.2",
     "sinon-chai": "npm:sinon-chai@2.8.0",
@@ -160,7 +160,7 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:lodash@4.0.0": {
+    "npm:lodash@4.0.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:mocha@2.3.4": {
