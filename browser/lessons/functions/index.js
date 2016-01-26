@@ -3,6 +3,9 @@ import {expect} from 'chai';
 import sinon from 'sinon';
 mocha.setup('bdd');
 
+
+// TODO array call on arguments
+
 describe('A good javascript developer', function () {
 
   context('mastering javascript functions', function () {

@@ -5,6 +5,12 @@ mocha.setup('bdd');
 
 import _ from 'lodash';
 
+// http://stackoverflow.com/questions/263965/how-can-i-convert-a-string-to-boolean-in-javascript
+// http://heyjavascript.com/javascript-string-to-boolean/
+// https://gist.github.com/CMCDragonkai/7389368
+// http://www.bennadel.com/blog/1784-using-double-not-operator-for-boolean-type-casting.htm
+
+
 describe('A good javascript developer', function () {
 
   context('mastering javascript types', function () {
