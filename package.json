@@ -20,16 +20,16 @@
     "node": "^4.2.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
     "start": "puer --exclude 'bower_components|node_modules|jspm_packages'",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npm-install-dev": "npm prune && npm install && npm update",
+    "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
     "jspm-install-dev": "jspm clean && jspm install && jspm update",
-    "install-globals": "npm install --global jspm puer && npm update -g jspm puer",
-    "install-dev": "npm run install-globals && npm prune && npm install && npm update && npm run jspm-install-dev",
-    "postinstall": "npm run jspm-install",
     "jj": "npm run jspm-install-dev",
-    "ii": "npm run install-dev"
+    "ii": "npm run npm-install-globals && npm run npm-install-dev",
+    "xx": "rm -rf node_modules && rm -rf jspm_packages"
   },
   "main": "index.js",
   "dependencies": {

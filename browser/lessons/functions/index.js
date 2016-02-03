@@ -14,7 +14,7 @@ describe('A good javascript developer', function () {
 
 
     // TODO a wrapper around console
-    console.log("User %s has %d points", userName, userPoints);
+    //console.log("User %s has %d points", userName, userPoints);
 
   });
 });

@@ -8,6 +8,8 @@ describe('A good javascript developer', function () {
   context('mastering functional programming', function () {
 
     it('should be able to do it');
+
+    // TODO example of composing cleaning/normalizing funcs for a full-text search
   });
 });
 

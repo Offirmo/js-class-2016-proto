@@ -18,8 +18,10 @@ It includes :
 
 ## Usage
 Node 4+ needed
+
 ```bash
 npm install
+npm run jspm-install
 npm start
 ```
 
