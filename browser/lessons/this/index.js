@@ -8,7 +8,7 @@ import _ from 'lodash';
 // TODO test mocha itself with ES6
 
 
-describe('A good javascript developer', function () {
+describe('TOSORT - A good javascript developer', function () {
 
   context('mastering "this"', function () {
 

@@ -1,6 +1,5 @@
 import mocha from 'mocha';
 import {expect} from 'chai';
-import sinon from 'sinon';
 mocha.setup('bdd');
 
 import {cloneDeep} from 'lodash';
@@ -17,13 +16,13 @@ const LS_KEY__MASTERING_RESOURCES_PANEL =
 // window.localStorage.getItem(<{string} key>);
 // window.localStorage.removeItem(<{string} key>);
 
-describe('A good javascript developer', function () {
+describe('Lesson 2 - A good javascript developer', function () {
 
   context('mastering Chrome Dev Tools', function () {
 
     it('should master local state modification', function () {
       //////////// **Instructions** ////////////
-      // you may NOT modify this test, except uncommenting the line below.
+      // you may NOT modify this test, EXCEPT uncommenting the line below :
       //debugger; //< you may uncomment this line
 
       let isMasteringStateModification = '' +
@@ -63,10 +62,6 @@ describe('A good javascript developer', function () {
       ).to.equal('Definitely!');
     });
 
-    it('should master console display', function () {
-      // TODO
-    });
-
     it('should NOT be tricked by console display', function () {
       let object = {};
 
@@ -90,9 +85,15 @@ describe('A good javascript developer', function () {
       console.log(this.test.title + ' : step 4, object is now =', object);
       expect(object).to.have.deep.property('foo.bar', 42);
 
-      // what ?
-      let IUnderstand = false; //< change this when you've managed proper console display !
-      //expect(IUnderstand).to.be.true;
+      // Now look at console display.
+      // what ????
+      // TODO understand
+
+      let copy = ( object ); // TODO change this line to use the cloneDeep() function
+      object.foo.bar = 33;
+
+      expect(object).to.have.deep.property('foo.bar', 33);
+      expect(copy).to.have.deep.property('foo.bar', 42);
     });
   });
 });

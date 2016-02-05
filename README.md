@@ -5,15 +5,16 @@
 ## Introduction
 Prototype of a JS class, aimed at high-level students.
 
-Program :
-* ES6 but mainly features available in node https://nodejs.org/en/docs/es6/
-
-
-It includes :
 * language katas using mocha/chai/sinon
   * Note : I found a similar idea, but for assessment https://github.com/rmurphey/js-assessment
 * simple tech demos
 * (TODO more)
+
+Program :
+* language : ES6 but mainly features available in node https://nodejs.org/en/docs/es6/
+* fetch API
+* node.js
+* AnglarJS
 
 
 ## Usage
@@ -24,6 +25,13 @@ npm install
 npm run jspm-install
 npm start
 ```
+
+
+## TODO
+* [ ] set Travis integration
+  * [ ] browser with karma + phantom + jspm
+  * [ ] node
+* [ ] Build an app skeleton for project
 
 
 ## Credits

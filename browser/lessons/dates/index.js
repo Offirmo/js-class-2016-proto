@@ -8,7 +8,7 @@ import _ from 'lodash';
 // current date, time difference, interval, timezone
 
 
-describe('A good javascript developer', function () {
+describe('TOSORT - A good javascript developer', function () {
 
   context('mastering Dates', function () {
 

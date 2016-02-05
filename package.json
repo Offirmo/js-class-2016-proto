@@ -22,13 +22,13 @@
   "scripts": {
     "start": "puer --exclude 'bower_components|node_modules|jspm_packages'",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
     "npm-install-dev": "npm prune && npm install && npm update",
     "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
-    "jspm-install-dev": "jspm clean && jspm install && jspm update",
+    "jspm-install-dev": "jspm update && jspm clean && jspm install",
     "jj": "npm run jspm-install-dev",
-    "ii": "npm run npm-install-globals && npm run npm-install-dev",
+    "ii": "npm run npm-install-globals && npm run npm-install-dev npm run jspm-install-dev",
     "xx": "rm -rf node_modules && rm -rf jspm_packages"
   },
   "main": "index.js",
@@ -36,8 +36,15 @@
     "lodash": "4.0.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^1.10.3",
     "jspm": "0.16.24",
-    "jspm-bower-endpoint": "0.3.2"
+    "jspm-bower-endpoint": "0.3.2",
+    "mocha": "^2.4.5",
+    "nsp": "^2.2.0",
+    "pre-commit": "^1.1.2",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
   },
   "jspm": {
     "dependencies": {
@@ -62,5 +69,6 @@
       "core-js": "npm:core-js@^1.1.4",
       "mocha": "npm:mocha@^2.3.4"
     }
-  }
+  },
+  "pre-commit": [],
 }

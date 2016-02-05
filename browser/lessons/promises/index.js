@@ -5,7 +5,7 @@ mocha.setup('bdd');
 
 import _ from 'lodash';
 
-describe('A good javascript developer', function () {
+describe('TOSORT - A good javascript developer', function () {
 
   context('mastering javascript Promises', function () {
 
