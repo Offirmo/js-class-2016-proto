@@ -70,5 +70,5 @@
       "mocha": "npm:mocha@^2.3.4"
     }
   },
-  "pre-commit": [],
+  "pre-commit": []
 }

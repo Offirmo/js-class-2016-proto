@@ -58,3 +58,7 @@ HTML APIs
 * https://developers.google.com/web/updates/
 * http://html5index.org/
 * http://www.w3schools.com/html/html5_geolocation.asp
+
+free REST APis
+* https://www.npmjs.com/package/hack-news
+* 

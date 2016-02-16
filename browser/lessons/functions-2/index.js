@@ -6,6 +6,26 @@ mocha.setup('bdd');
 import _ from 'lodash';
 
 // TODO array call on arguments
+// https://gist.github.com/kimmobrunfeldt/ca53975d4ae9a7851fa9
+
+/*
+ var targetUrls = _([req.query.targetUrl])
+ .flatten()
+ .map(function(url) {
+ try {
+ return getTargetUrl(decodeURIComponent(url));
+ } catch (err) {
+ logger.warn('Invalid request: URI malformed', {
+ category: 'blog-posts',
+ error: err,
+ requestUrl: req.url,
+ 'query.targetUrl': url
+ });
+ }
+ })
+ .compact()
+ .value();
+ */
 
 describe('Lesson 4 - A good javascript developer', function () {
 
@@ -62,6 +82,7 @@ describe('Lesson 4 - A good javascript developer', function () {
 
 ////////////////////////////////////
     function createBetterLogger() {
+      // à simplifier !!!
       function logBetter(level) {
         let originalArgs = Array.prototype.slice.call(arguments, 1); // because arguments is not an array
         //console.log('originalArgs', originalArgs);
@@ -176,3 +197,4 @@ describe('Lesson 4 - A good javascript developer', function () {
 
   });
 });
+
