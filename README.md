@@ -49,6 +49,7 @@ npm start
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 * https://github.com/braydie/HowToBeAProgrammer
 * http://caniuse.com
+* https://github.com/DrkSephy/es6-cheatsheet
 
 Ideas
 * n params : add numbers and callback function
@@ -61,4 +62,5 @@ HTML APIs
 
 free REST APis
 * https://www.npmjs.com/package/hack-news
+* https://github.com/zzarcon/nodegram
 * 
