@@ -82,8 +82,8 @@ describe('Lesson 3 - A good javascript developer', function () {
       TEST_CASES.forEach(ensure);
     });
 
-    /* Too hard ;-) but bonus points if you do it
-    it('should be able to do a correct conversion to boolean (round 4)', function () {
+    // Too hard ;-) but bonus points if you do it
+    it.skip('should be able to do a correct conversion to boolean (round 4)', function () {
       const TEST_CASES = [
         {
           input: 0,
@@ -105,7 +105,6 @@ describe('Lesson 3 - A good javascript developer', function () {
 
       TEST_CASES.forEach(ensure);
     });
-    */
 
     function ensure (testCase) {
       var output = convertToBoolean(testCase.input);

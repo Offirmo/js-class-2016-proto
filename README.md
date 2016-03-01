@@ -50,6 +50,7 @@ npm start
 * https://github.com/braydie/HowToBeAProgrammer
 * http://caniuse.com
 * https://nodejs.org/en/docs/es6/
+* https://github.com/DrkSephy/es6-cheatsheet
 
 Ideas
 * n params : add numbers and callback function
@@ -64,4 +65,5 @@ free REST APis
 * https://www.npmjs.com/package/hack-news
 * http://developer.marvel.com/
 * http://openweathermap.org/appid#get
-
+* https://github.com/zzarcon/nodegram
+* 
