@@ -1,6 +1,7 @@
 # js-class-2016-proto
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+[![Build Status](https://travis-ci.org/EpitaJS/js-class-2016-proto.svg?branch=master)](https://travis-ci.org/EpitaJS/js-class-2016-proto)
 
 ## Introduction
 This is a JS class, aimed at high-level students.
