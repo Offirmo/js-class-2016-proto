@@ -1,5 +1,7 @@
-import mocha from 'mocha';
-mocha.setup('bdd');
+//import mocha from 'mocha';
+//mocha.setup('bdd');
+
+console.log('hello from specs !');
 
 import * as LexicalAnalyser from './lexical-analyzer';
 

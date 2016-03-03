@@ -1,7 +1,7 @@
 System.config({
   //baseURL: "/",
-  baseURL: "base",
-  //baseURL: window.__karma__ ? "base" : "/",
+  //baseURL: "base",
+  baseURL: (window.__karma__ ? "base" : "/"),
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -13,7 +13,8 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-    "bower:*": "jspm_packages/bower/*"
+    "bower:*": "jspm_packages/bower/*",
+    "*": "*"
   },
 
   map: {

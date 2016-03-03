@@ -13,47 +13,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['es5-shim', 'jspm', 'mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      {
-        pattern: 'jspm_packages/system.js',
-        watched: false,
-        included: true,
-        served: true,
-        nocache: true
-      },
-      {
-        pattern: 'config.js',
-        watched: true,
-        included: true,
-        served: true,
-        nocache: true
-      },
-      {
-        pattern: 'browser/lessons/karma_bootstrap.js',
-        watched: true,
-        included: true,
-        served: true,
-        nocache: true
-      },
-      {
-        pattern: 'browser/**/*',
-        watched: true,
-        included: false,
-        served: true,
-        nocache: true
-      },
-      {
-        pattern: 'jspm_packages/**/*',
-        watched: false,
-        included: false,
-        served: true,
-        nocache: true
-      }
     ],
+
 
     // list of files to exclude
     exclude: [
@@ -91,7 +57,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [/*'Chrome'*/],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
@@ -108,6 +74,8 @@ module.exports = function(config) {
 
     plugins: [
       // Core
+      'karma-es5-shim',
+      'karma-jspm',
       'karma-mocha',
       // Launchers
       'karma-chrome-launcher',
@@ -116,6 +84,23 @@ module.exports = function(config) {
       'karma-nyan-reporter',
       'karma-spec-reporter'
     ],
+
+    jspm: {
+      loadFiles: [
+        'browser/lessons/index.js'
+      ],
+      serveFiles: [
+        //'**/*'
+        'browser',
+        'jspm_packages'
+      ],
+      paths: {
+        'bower:*': 'base/jspm_packages/bower/*',
+        'github:*': 'base/jspm_packages/github/*',
+        'npm:*': 'base/jspm_packages/npm/*',
+        '*': 'base/*'
+      }
+    },
 
     // https://groups.google.com/forum/#!topic/karma-users/B-E7nLphNHQ
     browserNoActivityTimeout: 20000,

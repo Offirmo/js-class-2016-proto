@@ -1,34 +1,43 @@
 'use strict';
 
-import mocha from 'mocha';
+/** Bootstrap mocha/chai unit tests
+ *
+ * Note : mocha is expected to be already loaded
+ *        important sinci karma runner, with its karma-mocha plugin,
+ *        injects mocha from elsewhere, and loading 2x mocha breaks stuff !
+ */
 
 import chai from 'chai';
 //import chaiAsPromised from 'chai-as-promised';
 //import chaiDatetime from 'chai-datetime';
 //import chaiJquery from 'chai-jquery';
 //import chaiThings from 'chai-things';
-
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 
-mocha.checkLeaks();
-mocha.setup('bdd');
+window.mocha.checkLeaks();
+window.mocha.setup('bdd');
 
 //chai.use(chaiAsPromised);
 //chai.use(chaiDatetime);
 //chai.use(chaiJquery);
 //chai.use(chaiThings);
-
 chai.use(sinonChai);
 
 // expose for convenience
-window.mocha = mocha;
 window.sinon = sinon;
 window.expect = chai.expect;
 
-import './functions-1/lexical-analyzer.spec.js';
+const specs = [
+  'functions-1/lexical-analyzer.spec'
+];
+export default specs;
 
-//mocha.run();
+
+if (! window.__karma__) {
+  Promise.all(specs.map(path => System.import('./' + path)))
+  .then(() => mocha.run())
+}
 
 /*
  './functions-1/index.js',
