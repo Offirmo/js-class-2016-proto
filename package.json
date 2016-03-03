@@ -24,7 +24,7 @@
     "start": "puer --exclude 'node_modules|jspm_packages'",
     "lint": "eslint .",
     "xtest": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
-    "test": "karma start --log-level debug",
+    "test": "karma start",
     "test:client": "karma start --single-run --browsers PhantomJS --log-level debug",
     "npm-install-dev": "npm prune && npm install && npm update",
     "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
