@@ -27,6 +27,7 @@ npm start
 
 
 ## TODO
+* [ ] REWORK TESTS
 * [ ] set Travis integration
   * [ ] browser with karma + phantom + jspm
   * [ ] node

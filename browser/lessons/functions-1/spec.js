@@ -4,31 +4,9 @@ mocha.setup('bdd');
 
 // inspiration : https://www.new-bamboo.co.uk/blog/2013/02/26/full-text-search-in-your-browser/
 
-describe('Lesson 1 - A good javascript developer', function () {
+describe('[Lesson 1] A good javascript developer', function () {
 
   context('mastering javascript functions', function () {
-
-////////////////////////////////////
-    // hints : Array.split, Array.push
-    function tokenize(str) {
-      // TODO write the function so it passes the tests below !
-    }
-
-    // hints : String.toLowerCase
-    function stem(str) {
-      // TODO write the function so it passes the tests below !
-    }
-
-    // hints : Array.map
-    function parse(str) {
-      // TODO write the function so it passes the tests below !
-    }
-
-    // hints : Array.forEach or Array.reduce
-    function index(str) {
-      // TODO write the function so it passes the tests below !
-    }
-////////////////////////////////////
 
     describe('writes a tokenizer : it...', function () {
 
@@ -76,12 +54,5 @@ describe('Lesson 1 - A good javascript developer', function () {
           });
       });
     });
-
-
-
-
-    // TODO a wrapper around console
-    //console.log("User %s has %d points", userName, userPoints);
-
   });
 });
