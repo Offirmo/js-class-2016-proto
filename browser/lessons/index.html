@@ -11,7 +11,10 @@
   <script>
     window.define = System.amdDefine;
     window.require = window.requirejs = System.amdRequire;
-    System.import('./index.js');
+    System.import('./index.js')
+    .then(function() {
+      mocha.run();
+    })
   </script>
 
 </head>

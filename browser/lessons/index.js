@@ -3,10 +3,10 @@
 import mocha from 'mocha';
 
 import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
-import chaiDatetime from 'chai-datetime';
+//import chaiAsPromised from 'chai-as-promised';
+//import chaiDatetime from 'chai-datetime';
 //import chaiJquery from 'chai-jquery';
-import chaiThings from 'chai-things';
+//import chaiThings from 'chai-things';
 
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -14,17 +14,21 @@ import sinonChai from 'sinon-chai';
 mocha.checkLeaks();
 mocha.setup('bdd');
 
-chai.use(chaiAsPromised);
-chai.use(chaiDatetime);
+//chai.use(chaiAsPromised);
+//chai.use(chaiDatetime);
 //chai.use(chaiJquery);
-chai.use(chaiThings);
+//chai.use(chaiThings);
 
 chai.use(sinonChai);
 
+// expose for convenience
+window.mocha = mocha;
+window.sinon = sinon;
+window.expect = chai.expect;
 
-import './functions-1/spec.js';
+import './functions-1/lexical-analyzer.spec.js';
 
-mocha.run();
+//mocha.run();
 
 /*
  './functions-1/index.js',

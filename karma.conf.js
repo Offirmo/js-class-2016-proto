@@ -8,12 +8,12 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '.',
+    basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['es5-shim', 'mocha', 'jspm'],
+    frameworks: ['es5-shim', 'jspm', 'mocha'],
 
 
     // list of files / patterns to load in the browser
@@ -68,11 +68,15 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
+    /*proxies: {
+      '/assertion-error.js': 'jspm_packages/npm/assertion-error@1.0.1/index.js',
+    },*/
+
     plugins: [
       // Core
-      'karma-mocha',
-      'karma-jspm',
       'karma-es5-shim',
+      'karma-jspm',
+      'karma-mocha',
       // Launchers
       'karma-chrome-launcher',
       'karma-phantomjs-launcher',
@@ -83,10 +87,12 @@ module.exports = function(config) {
 
     jspm: {
       loadFiles: [
-        'browser/lessons/**/*.js'
+        'browser/lessons/index.js'
       ],
       serveFiles: [
-        '**/*'
+        //'**/*'
+        'browser',
+        'jspm_packages'
       ],
       paths: {
         'bower:*': 'base/jspm_packages/bower/*',
