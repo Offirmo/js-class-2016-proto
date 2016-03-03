@@ -3,7 +3,7 @@
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 ## Introduction
-Prototype of a JS class, aimed at high-level students.
+This is a JS class, aimed at high-level students.
 
 * language katas using mocha/chai/sinon
   * Note : I found a similar idea, but for assessment https://github.com/rmurphey/js-assessment
@@ -21,8 +21,7 @@ Program :
 Node 4+ needed
 
 ```bash
-npm install
-npm run jspm-install
+npm run full-install
 npm start
 ```
 
@@ -52,7 +51,7 @@ npm start
 * https://nodejs.org/en/docs/es6/
 * https://github.com/DrkSephy/es6-cheatsheet
 
-Ideas
+## Ideas
 * n params : add numbers and callback function
 * auto-convert links-like to proper links in a page
 

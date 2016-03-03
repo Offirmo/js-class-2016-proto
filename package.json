@@ -20,7 +20,8 @@
     "node": "^4.2.6"
   },
   "scripts": {
-    "start": "puer --exclude 'bower_components|node_modules|jspm_packages'",
+    "full-install": "npm run npm-install-globals && npm install && npm run jspm-install",
+    "start": "puer --exclude 'node_modules|jspm_packages'",
     "lint": "eslint .",
     "test": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
     "npm-install-dev": "npm prune && npm install && npm update",
@@ -28,7 +29,7 @@
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
     "jspm-install-dev": "jspm update && jspm clean && jspm install",
     "jj": "npm run jspm-install-dev",
-    "ii": "npm run npm-install-globals && npm run npm-install-dev npm run jspm-install-dev",
+    "ii": "npm run npm-install-globals && npm run npm-install-dev && npm run jspm-install-dev",
     "xx": "rm -rf node_modules && rm -rf jspm_packages"
   },
   "main": "index.js",
@@ -40,8 +41,11 @@
     "eslint": "^1.10.3",
     "jspm": "0.16.24",
     "jspm-bower-endpoint": "0.3.2",
+    "karma": "^0.13.21",
+    "karma-phantomjs-launcher": "^1.0.0",
     "mocha": "^2.4.5",
     "nsp": "^2.2.0",
+    "phantomjs-prebuilt": "^2.1.4",
     "pre-commit": "^1.1.2",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
