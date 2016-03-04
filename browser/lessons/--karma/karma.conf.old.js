@@ -8,7 +8,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../../..',
 
 
     // frameworks to use
@@ -104,8 +104,8 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     /*proxies: {
-      '/assertion-error.js': 'jspm_packages/npm/assertion-error@1.0.1/index.js',
-    },*/
+     '/assertion-error.js': 'jspm_packages/npm/assertion-error@1.0.1/index.js',
+     },*/
 
     plugins: [
       // Core

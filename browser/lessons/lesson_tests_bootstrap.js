@@ -3,7 +3,7 @@
 /** Bootstrap mocha/chai unit tests
  *
  * Note : mocha is expected to be already loaded
- *        important sinci karma runner, with its karma-mocha plugin,
+ *        important since karma runner, with its karma-mocha plugin,
  *        injects mocha from elsewhere, and loading 2x mocha breaks stuff !
  */
 
@@ -34,7 +34,14 @@ const specs = [
 export default specs;
 
 
-if (! window.__karma__) {
+if (window.__karma__) {
+  Promise.all(specs.map(path => System.import('browser/lessons/' + path)))
+  .then(() => {
+    console.log('lets go !');
+    window.__delayed_karma_start();
+  });
+}
+else {
   Promise.all(specs.map(path => System.import('./' + path)))
   .then(() => mocha.run())
 }
