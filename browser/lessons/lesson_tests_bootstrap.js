@@ -29,15 +29,29 @@ window.sinon = sinon;
 window.expect = chai.expect;
 
 const specs = [
-  'functions-1/lexical-analyzer.spec'
+  'functions-1/lexical-analyzer.spec',
+  /*
+   './functions-1/index.js',
+   './chrome-dev-tools/index.js',
+   './types/index.js',
+   './functions-2/index.js',
+
+   './async-callback/index.js',
+   './dates/index.js',
+   './functional-programming/index.js',
+   './promises/index.js',
+   './this/index.js',
+   './timeouts/index.js',
+   */
 ];
 export default specs;
 
 
 if (window.__karma__) {
+  // REM : we load from /
   Promise.all(specs.map(path => System.import('browser/lessons/' + path)))
   .then(() => {
-    console.log('lets go !');
+    console.log('* All tests loaded, lets go !');
     window.__delayed_karma_start();
   });
 }
@@ -45,17 +59,3 @@ else {
   Promise.all(specs.map(path => System.import('./' + path)))
   .then(() => mocha.run())
 }
-
-/*
- './functions-1/index.js',
- './chrome-dev-tools/index.js',
- './types/index.js',
- './functions-2/index.js',
-
- './async-callback/index.js',
- './dates/index.js',
- './functional-programming/index.js',
- './promises/index.js',
- './this/index.js',
- './timeouts/index.js',
- */

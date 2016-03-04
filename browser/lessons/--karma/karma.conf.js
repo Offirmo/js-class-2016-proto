@@ -112,11 +112,12 @@ module.exports = function(config) {
       'karma-firefox-launcher',
       'karma-phantomjs-launcher',
       // Reporters
-      'karma-nyan-reporter',
+      //'karma-nyan-reporter',
       'karma-spec-reporter'
     ],
 
     // https://groups.google.com/forum/#!topic/karma-users/B-E7nLphNHQ
+    // https://docs.travis-ci.com/user/gui-and-headless-browsers/#Karma-and-Firefox-inactivity-timeouts
     browserNoActivityTimeout: 20000,
     browserDisconnectTimeout: 5000
   });

@@ -25,14 +25,15 @@
     "lint": "eslint .",
     "xtest": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
     "test": "karma start browser/lessons/--karma/karma.conf.js --single-run --browsers Firefox",
-    "karmastart": "karma start browser/lessons/--karma/karma.conf.js --auto-watch",
+    "ks": "karma start browser/lessons/--karma/karma.conf.js --auto-watch",
     "npm-install-dev": "npm prune && npm install && npm update",
     "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
-    "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y && ./scripts/reset_jspm_config.bash",
-    "jspm-install-dev": "jspm update && jspm clean && jspm install && ./scripts/reset_jspm_config.bash",
+    "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
+    "jspm-install-dev": "jspm update && jspm clean && jspm install",
     "jj": "npm run jspm-install-dev",
     "ii": "npm run npm-install-globals && npm run npm-install-dev && npm run jspm-install-dev",
-    "xx": "rm -rf node_modules && rm -rf jspm_packages"
+    "xx": "rm -rf node_modules && rm -rf jspm_packages",
+    "temp": " && ./scripts/reset_jspm_config.bash"
   },
   "main": "index.js",
   "dependencies": {

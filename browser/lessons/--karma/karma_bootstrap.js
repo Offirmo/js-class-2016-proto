@@ -1,5 +1,3 @@
-'use strict';
-
 /** lessons unit tests bootstrap for karma
  *
  * NOTE : karma serves everything from a base/ path
@@ -14,22 +12,23 @@
  * Wrapping all that :
  */
 
-
 (function() {
-  var allReady = false;
+  'use strict';
+
+  console.log('* loading lessons tests in karma...');
 
   // intercept karma start in order to wait for our asynchronously loaded tests to be ready
   var original_karma_start = window.__karma__.start;
   window.__karma__.start = function() {
-    console.log('original __karma__.start intercepted !', arguments);
+    console.log('* original __karma__.start intercepted !', arguments);
     var savedArgs = arguments;
 
-    // restore
+    // restore XXX restoring breaks things ?!?
     //window.__karma__.start = original_karma_start;
 
-    // expose correct
+    // expose a way to call it later with the same params
     window.__delayed_karma_start = function () {
-      console.log('calling original __karma__.start with :', savedArgs);
+      console.log('* calling original __karma__.start with :', savedArgs);
       return original_karma_start.apply(window.__karma__, savedArgs)
     };
   };
@@ -41,8 +40,7 @@
   }
 
   var POLLING_INTERVAL_MS = 25;
-  function wait_for(testFn) {
-    var cb;
+  function wait_for(testFn, cb) {
 
     function check() {
       var is_ready = testFn();
@@ -52,10 +50,6 @@
         cb();
     }
     setTimeout(check, POLLING_INTERVAL_MS);
-
-    return { // very simple pseudo-promise
-      then(fn) { cb = fn; }
-    }
   }
 
   // trick systemJS in order to be able to dynamically change the config
@@ -68,12 +62,12 @@
     }
   };
 
+  // start loading additional scripts, enforcing order with waits
   load_script('base/config.js');
   wait_for(function() {
     return !!systemJSConfig;
-  })
-  .then(function () {
-    console.log('intercepted config !');
+  }, function () {
+    console.log('* systemJS config intercepted !');
 
     // change the config
     systemJSConfig.baseURL = 'base';
@@ -82,9 +76,8 @@
 
     wait_for(function() {
       return !!window.System;
-    })
-    .then(function () {
-      console.log('systemJS loaded !');
+    }, function () {
+      console.log('* systemJS loaded !');
       window.System.config(systemJSConfig);
 
       // expose jspm AMD loading
@@ -94,10 +87,8 @@
       // start common test bootstrapping
       System.import('browser/lessons/lesson_tests_bootstrap.js')
       .then(function() {
-        allReady = true;
-        console.log('all ready !');
+        console.log('* test bootstrap loaded ! nearly ready...');
       });
-    })
-  })
-
+    });
+  });
 })();
