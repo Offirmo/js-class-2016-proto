@@ -49,16 +49,22 @@
 
   var POLLING_INTERVAL_MS = 100;
   function wait_for(testFn, cb) {
+    var wait_count = 0;
 
     function check() {
-      console.log('  Waiting...');
+      wait_count++;
+      //console.log('  Waiting...', wait_count);
       var is_ready = testFn();
-      if (! is_ready)
-        setTimeout(check, POLLING_INTERVAL_MS);
-      else {
+      if (is_ready) {
         console.log('* Wait succeeded !');
         cb();
       }
+      else if (wait_count > 10) {
+        console.log('* Wait timed out, attempting to go forward anyway...');
+        cb();
+      }
+      else
+        setTimeout(check, POLLING_INTERVAL_MS);
     }
     setTimeout(check, POLLING_INTERVAL_MS);
   }
@@ -74,6 +80,7 @@
   };
 
   // start loading additional scripts, enforcing order with waits
+  load_script('base/jspm_packages/system-polyfills.js');
   load_script('base/config.js');
   wait_for(function() {
     return !!systemJSConfig;
