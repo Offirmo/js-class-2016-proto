@@ -18,7 +18,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      // loaded files : (must have only 1 if using PhatomJS)
+      // loaded files : (must have only 1 if using PhantomJS)
       {
         pattern: 'browser/lessons/--karma/karma_bootstrap.js',
         watched: true,
@@ -109,6 +109,7 @@ module.exports = function(config) {
       'karma-mocha',
       // Launchers
       'karma-chrome-launcher',
+      'karma-firefox-launcher',
       'karma-phantomjs-launcher',
       // Reporters
       'karma-nyan-reporter',
