@@ -25,7 +25,7 @@
     "lint": "eslint .",
     "xtest": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
     "test": "karma start browser/lessons/--karma/karma.conf.js --single-run --browsers Firefox",
-    "karmastart": "karma start browser/lessons/--karma/karma.conf.js",
+    "karmastart": "karma start browser/lessons/--karma/karma.conf.js --auto-watch",
     "npm-install-dev": "npm prune && npm install && npm update",
     "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y && ./scripts/reset_jspm_config.bash",
