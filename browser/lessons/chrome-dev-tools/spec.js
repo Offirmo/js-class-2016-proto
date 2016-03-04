@@ -1,7 +1,3 @@
-import mocha from 'mocha';
-import {expect} from 'chai';
-mocha.setup('bdd');
-
 import {cloneDeep} from 'lodash';
 
 const LS_KEY__MASTERING_STATE_MODIFICATION =
@@ -16,11 +12,12 @@ const LS_KEY__MASTERING_RESOURCES_PANEL =
 // window.localStorage.getItem(<{string} key>);
 // window.localStorage.removeItem(<{string} key>);
 
-describe('Lesson 2 - A good javascript developer', function () {
+context('[Lesson 2]', function () {
 
-  context('mastering Chrome Dev Tools', function () {
+  describe('A good javascript developer mastering Chrome Dev Tools', function () {
 
     it('should master local state modification', function () {
+      if (window.__karma__) return;
       //////////// **Instructions** ////////////
       // you may NOT modify this test, EXCEPT uncommenting the line below :
       //debugger; //< you may uncomment this line
@@ -43,6 +40,7 @@ describe('Lesson 2 - A good javascript developer', function () {
     });
 
     it('should master console REPL', function () {
+      if (window.__karma__) return;
       //////////// **Instructions** ////////////
       // you may NOT modify this test AT ALL
       // you may NOT use the debugger like in previous test !
@@ -53,6 +51,7 @@ describe('Lesson 2 - A good javascript developer', function () {
     });
 
     it('should master "resources" panel', function () {
+      if (window.__karma__) return;
       //////////// **Instructions** ////////////
       // you may NOT modify this test AT ALL
       // you may NOT use the debugger nor the REPL like in previous tests !

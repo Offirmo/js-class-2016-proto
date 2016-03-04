@@ -34,20 +34,31 @@
   };
 
   function load_script(src) {
+    console.log('* loading script "' + src + '"...');
     var se = document.createElement('script');
     se.src = src;
+
+    /* google analytics style
+    var m = document.getElementsByTagName('script')[0];
+    m.parentNode.insertBefore(se, m);
+     */
+
+    // standard style
     document.getElementsByTagName('body').item(0).appendChild(se);
   }
 
-  var POLLING_INTERVAL_MS = 25;
+  var POLLING_INTERVAL_MS = 100;
   function wait_for(testFn, cb) {
 
     function check() {
+      console.log('  Waiting...');
       var is_ready = testFn();
       if (! is_ready)
         setTimeout(check, POLLING_INTERVAL_MS);
-      else
+      else {
+        console.log('* Wait succeeded !');
         cb();
+      }
     }
     setTimeout(check, POLLING_INTERVAL_MS);
   }

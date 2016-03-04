@@ -30,12 +30,12 @@ window.expect = chai.expect;
 
 const specs = [
   'functions-1/lexical-analyzer.spec',
+  'chrome-dev-tools/spec.js',
+
+  'es5/spec.js',
   /*
-   './functions-1/index.js',
-   './chrome-dev-tools/index.js',
    './types/index.js',
    './functions-2/index.js',
-
    './async-callback/index.js',
    './dates/index.js',
    './functional-programming/index.js',

@@ -1,8 +1,3 @@
-//import mocha from 'mocha';
-//mocha.setup('bdd');
-
-console.log('hello from specs !');
-
 import * as LexicalAnalyser from './lexical-analyzer';
 
 // inspiration : https://www.new-bamboo.co.uk/blog/2013/02/26/full-text-search-in-your-browser/
