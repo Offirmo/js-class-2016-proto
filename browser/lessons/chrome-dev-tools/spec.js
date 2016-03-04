@@ -88,7 +88,7 @@ context('[Lesson 2]', function () {
       // what ????
       // TODO understand
 
-      let copy = ( object ); // TODO change this line to use the cloneDeep() function
+      let copy = cloneDeep( object ); // TODO change this line to use the cloneDeep() function
       object.foo.bar = 33;
 
       expect(object).to.have.deep.property('foo.bar', 33);

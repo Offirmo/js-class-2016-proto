@@ -6,7 +6,7 @@ context('[Lesson 1]', function () {
 
   describe('lexical analyser', function () {
 
-    describe('tokenize(…)', function () {
+    describe('tokenize(...)', function () {
 
       it('should tokenize properly a trivial string', function () {
         expect( LexicalAnalyser.tokenize('Qui me parle ?') )
@@ -19,14 +19,14 @@ context('[Lesson 1]', function () {
       });
     });
 
-    describe('stem(…)', function () {
+    describe('stem(...)', function () {
 
       it('should stem by harmonizing case', function () {
         expect( LexicalAnalyser.stem('Qui') ).to.equal('qui');
       });
     });
 
-    describe('parse(…)', function () {
+    describe('parse(...)', function () {
 
       it('should combine the tokenizer and stemmer', function () {
         expect( LexicalAnalyser.parse(' Qui me  parle ?  Qui me cherche ?') )
@@ -34,9 +34,9 @@ context('[Lesson 1]', function () {
       });
     });
 
-    describe('index(…)', function () {
+    describe('index(...)', function () {
 
-      it('should compute term frequency', function () {
+      it('should parse then compute term frequency', function () {
         expect( LexicalAnalyser.index(' Qui me  parle ?  Qui me cherche ?') )
           .to.deep.equal({
             qui: 2,

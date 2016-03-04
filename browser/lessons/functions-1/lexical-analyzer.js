@@ -1,21 +1,53 @@
 
+/*
+ *
+ ******* Array *******
 
-// hints : Array.split, Array.push
+ Array.push(<new item>)
+
+ array.forEach(value => {
+   ...
+ });
+
+ Array.map(value => {
+   return <newValue>;
+ });
+
+ Array.reduce((accumulator, value) => {
+   accumulator += value;
+   return accumulator;
+ }, 0);
+
+ ******* String *******
+
+ String.split(<separator>) -> Array
+
+ String.toLowerCase()
+
+ *
+ */
+
 export function tokenize(str) {
-  // TODO write the function so it passes the tests !
+  let tokens = [];
+  str.split(' ').forEach(token => {
+    if (token.length) tokens.push(token);
+  });
+  return tokens;
 }
 
-// hints : String.toLowerCase
 export function stem(str) {
-  // TODO write the function so it passes the tests !
+  return str.toLowerCase();
 }
 
-// hints : Array.map
 export function parse(str) {
-  // TODO write the function so it passes the tests !
+  return tokenize(str).map(stem);
 }
 
-// hints : Array.forEach or Array.reduce
+// hints : Array.forEach or
 export function index(str) {
-  // TODO write the function so it passes the tests !
+  return parse(str).reduce((acc, value) => {
+    acc[value] = acc[value] || 0;
+    acc[value]++;
+    return acc;
+  }, {})
 }
