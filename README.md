@@ -1,9 +1,10 @@
 # js-class-2016-proto
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+[![Build Status](https://travis-ci.org/EpitaJS/js-class-2016-proto.svg?branch=master)](https://travis-ci.org/EpitaJS/js-class-2016-proto)
 
 ## Introduction
-Prototype of a JS class, aimed at high-level students.
+This is a JS class, aimed at high-level students.
 
 * language katas using mocha/chai/sinon
   * Note : I found a similar idea, but for assessment https://github.com/rmurphey/js-assessment
@@ -21,13 +22,13 @@ Program :
 Node 4+ needed
 
 ```bash
-npm install
-npm run jspm-install
+npm run full-install
 npm start
 ```
 
 
 ## TODO
+* [ ] REWORK TESTS
 * [ ] set Travis integration
   * [ ] browser with karma + phantom + jspm
   * [ ] node
@@ -52,7 +53,7 @@ npm start
 * https://nodejs.org/en/docs/es6/
 * https://github.com/DrkSephy/es6-cheatsheet
 
-Ideas
+## Ideas
 * n params : add numbers and callback function
 * auto-convert links-like to proper links in a page
 

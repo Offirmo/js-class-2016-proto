@@ -17,34 +17,52 @@
   },
   "homepage": "https://github.com/EpitaJS/js-class-2016-proto#readme",
   "engines": {
-    "node": "^4.2.6"
+    "node": "^4.3.2"
   },
   "scripts": {
-    "start": "puer --exclude 'bower_components|node_modules|jspm_packages'",
+    "full-install": "npm run npm-install-globals && npm install && npm run jspm-install",
+    "start": "puer --exclude 'node_modules|jspm_packages'",
     "lint": "eslint .",
-    "test": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
+    "xtest": "mocha --debug --check-leaks --require .mocha.init.js browser/lessons/**/*.js",
+    "test": "karma start browser/lessons/--karma/karma.conf.js --single-run --browsers PhantomJS",
+    "ks": "karma start browser/lessons/--karma/karma.conf.js --auto-watch",
     "npm-install-dev": "npm prune && npm install && npm update",
     "npm-install-globals": "npm install --global jspm puer && npm update -g jspm puer",
     "jspm-install": "jspm registry create bower jspm-bower-endpoint -y && jspm install -y",
     "jspm-install-dev": "jspm update && jspm clean && jspm install",
     "jj": "npm run jspm-install-dev",
-    "ii": "npm run npm-install-globals && npm run npm-install-dev npm run jspm-install-dev",
-    "xx": "rm -rf node_modules && rm -rf jspm_packages"
+    "ii": "npm run npm-install-globals && npm run npm-install-dev && npm run jspm-install-dev",
+    "xx": "rm -rf node_modules && rm -rf jspm_packages",
+    "temp": " && ./scripts/reset_jspm_config.bash"
   },
   "main": "index.js",
   "dependencies": {
-    "lodash": "4.0.0"
+    "lodash": "4.6.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^1.10.3",
-    "jspm": "0.16.24",
+    "chai": "3.5.0",
+    "chai-as-promised": "5.2.0",
+    "chai-datetime": "1.4.1",
+    "chai-jquery": "2.0.0",
+    "chai-things": "0.2.0",
+    "eslint": "2.2.0",
+    "jspm": "0.16.30",
     "jspm-bower-endpoint": "0.3.2",
-    "mocha": "^2.4.5",
-    "nsp": "^2.2.0",
-    "pre-commit": "^1.1.2",
-    "sinon": "^1.17.3",
-    "sinon-chai": "^2.8.0"
+    "karma": "0.13.21",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-es5-shim": "0.0.4",
+    "karma-firefox-launcher": "0.1.7",
+    "karma-mocha": "0.2.2",
+    "karma-nyan-reporter": "0.2.3",
+    "karma-phantomjs-launcher": "1.0.0",
+    "karma-spec-reporter": "0.0.24",
+    "mocha": "2.4.5",
+    "nsp": "2.2.0",
+    "phantomjs-prebuilt": "2.1.3",
+    "pre-commit": "1.1.2",
+    "puer": "1.1.1",
+    "sinon": "1.17.3",
+    "sinon-chai": "2.8.0"
   },
   "jspm": {
     "dependencies": {
@@ -57,18 +75,26 @@
       "jquery": "npm:jquery@^2.2.0",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "lodash": "npm:lodash@^4.0.0",
-      "sinon": "npm:sinon@^1.17.2",
-      "sinon-chai": "npm:sinon-chai@^2.8.0",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "chai": "npm:chai@^3.4.1",
+      "chai": "npm:chai@^3.5.0",
+      "chai-as-promised": "npm:chai-as-promised@^5.2.0",
+      "chai-datetime": "npm:chai-datetime@^1.4.1",
+      "chai-jquery": "npm:chai-jquery@^2.0.0",
+      "chai-things": "npm:chai-things@^0.2.0",
       "clean-css": "npm:clean-css@^3.4.9",
       "core-js": "npm:core-js@^1.1.4",
-      "mocha": "npm:mocha@^2.3.4"
+      "mocha": "npm:mocha@^2.3.4",
+      "sinon": "npm:sinon@^1.17.2",
+      "sinon-chai": "npm:sinon-chai@^2.8.0"
     }
   },
-  "pre-commit": []
+  "pre-commit": [],
+  "commented": {
+    "karma-phantomjs-launcher": "0.2.3",
+    "phantomjs": "1.9.19"
+  }
 }
