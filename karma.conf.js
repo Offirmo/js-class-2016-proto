@@ -13,7 +13,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: [ 'es5-shim', 'mocha' ],
 
 
     // list of files / patterns to load in the browser
@@ -33,13 +33,6 @@ module.exports = function(config) {
         nocache: true
       },
       {
-        pattern: 'browser/lessons/karma_bootstrap.js',
-        watched: true,
-        included: true,
-        served: true,
-        nocache: true
-      },
-      {
         pattern: 'browser/**/*',
         watched: true,
         included: false,
@@ -50,6 +43,13 @@ module.exports = function(config) {
         pattern: 'jspm_packages/**/*',
         watched: false,
         included: false,
+        served: true,
+        nocache: true
+      },
+      {
+        pattern: 'browser/lessons/karma_bootstrap.js',
+        watched: true,
+        included: true,
         served: true,
         nocache: true
       }
@@ -83,7 +83,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -109,6 +109,7 @@ module.exports = function(config) {
 
     plugins: [
       // Core
+      'karma-es5-shim',
       'karma-mocha',
       // Launchers
       'karma-chrome-launcher',
